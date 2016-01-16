@@ -20,6 +20,3 @@ rm -rf /setup/*.gz
 cp hbase-site.template /usr/lib/hbase/conf/
 
 mv dockmobStart.sh /usr/lib/hbase/bin
-
-# Put binaries into path
-ln -s /usr/lib/hbase/bin/hbase /usr/bin/hbase
