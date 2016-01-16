@@ -1,4 +1,4 @@
-# docker-hadoop
+# docker-hbase
 Docker images for Apache HBase.
 
 Pseudo-distributed mode is supported.
