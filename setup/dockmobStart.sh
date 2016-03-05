@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f /var/hbase/config_ok ];
+if [ ! -f $DATA_DIRECTORY/config_ok ];
 then
     set -e
 
@@ -36,10 +36,10 @@ then
         ./hbase master start --localRegionServers=0
     fi
 
-    echo "$t" > /var/hbase/config_ok
+    echo "$t" > $DATA_DIRECTORY/config_ok
 
 else
-    t=$(cat /var/hbase/config_ok)
+    t=$(cat $DATA_DIRECTORY/config_ok)
     echo "Restarting $t"
     ./hbase zookeeper > /var/log/zookeeper.log 2>&1 &
     ./hbase regionserver start > /var/log/regionserver.log 2>&1 &
