@@ -1,10 +1,10 @@
 #!/bin/bash
 
-URL_PREFIX=hbase-
-VERSION=1.0.1
+URL_PREFIX=
+VERSION=1.1.2
 
 if [ ! -f "hbase-$VERSION-bin.tar.gz" ]; then
-    wget http://archive.eu.apache.org/dist/hbase/${URL_PREFIX}${VERSION}/hbase-${VERSION}-bin.tar.gz
+    wget http://archive.apache.org/dist/hbase/${URL_PREFIX}${VERSION}/hbase-${VERSION}-bin.tar.gz
 fi
 
 tar xzf hbase-${VERSION}-bin.tar.gz -C /usr/lib/
